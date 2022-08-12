@@ -13,15 +13,17 @@ async function loadWeather(e) {
   } else {
     weatherBlock.innerHTML = responseResult.massage;
   }
+}
 
-  function getWeather(data) {
-    const location = data.name;
-    const temp = Math.round(data.main.temp);
-    const feelsLike = Math.round(data.main.feels_Like);
-    const weatherStatus = data.weather[0].main;
-    const weatherIcon = data.weather[0].icon;
+function getWeather(data) {
+  const location = data.name;
+  const temp = Math.round(data.main.temp);
+  const feelsLike = Math.round(data.main.feels_like);
+  const weatherStatus = data.weather[0].main;
+  const weatherIcon = data.weather[0].icon;
+  const wind = Math.round(data.wind.speed);
 
-    const template = `<div class="weather_header">
+  const template = `<div class="weather_header">
     <div class="weather_main">
         <div class="weather_city">${location}</div>
         <div class="weather_status">${weatherStatus}</div>
@@ -30,13 +32,13 @@ async function loadWeather(e) {
         <img src="http://openweathermap.org/img/w/${weatherIcon}.png" alt="${weatherStatus}">
     </div>
     <div class="weather_temp">${temp}</div>
+    <div class="weather_wind">Wind Speed ${wind}</div>
     <div class="weather_feels-like">Feels like:${feelsLike}</div>
 </div>`;
 
-    weatherBlock.innerHTML = template;
-  }
+  weatherBlock.innerHTML = template;
+}
 
-  if (weatherBlock) {
-    loadWeather();
-  }
+if (weatherBlock) {
+  loadWeather();
 }

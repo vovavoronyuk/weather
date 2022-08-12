@@ -26,12 +26,18 @@
 .weather_icon{}
 
 .weather_temp {
-font-size: 30px;
-font-weight: 700;
-margin-bottom: 10px;
-margin-top: 40px;
+    font-size: 30px;
+    font-weight: 700;
+   
+    margin-top: 45px;
+  
+    margin: 47px 0 0 243px;
+    position: absolute;
 }
-.weather_feels-like{}
+.weather_feels-like{
+    position: absolute;
+    margin: 20px 0 0 360px;
+}
 .weather_temp::after,.weather_feels-like::after{
     display: inline-block;
     margin-left: 5px;
@@ -39,4 +45,9 @@ margin-top: 40px;
 }
 .weather_icon {
     margin-top: 40px;
+    margin-right: 216px;
+}
+.weather_wind{
+    position: absolute;
+    margin-left: 359px;
 }
