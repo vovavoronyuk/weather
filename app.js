@@ -2,7 +2,7 @@ const weatherBlock = document.querySelector("#weather");
 
 async function loadWeather(e) {
   const server =
-    "http://api.openweathermap.org/data/2.5/weather?q=Dnipro&units=metric&APPID=3eb66b9ddb0ac05b1a73a890e5c92a00";
+    "https://api.openweathermap.org/data/2.5/weather?q=Dnipro&units=metric&APPID=3eb66b9ddb0ac05b1a73a890e5c92a00";
 
   const response = await fetch(server, {
     method: "GET",
@@ -29,7 +29,7 @@ function getWeather(data) {
         <div class="weather_status">${weatherStatus}</div>
     </div>
     <div class="weather_icon">
-        <img src="http://openweathermap.org/img/w/${weatherIcon}.png" alt="${weatherStatus}">
+        <img src="https://openweathermap.org/img/w/${weatherIcon}.png" alt="${weatherStatus}">
     </div>
     <div class="weather_temp">${temp}</div>
     <div class="weather_wind">Wind Speed ${wind}</div>
