@@ -36,7 +36,7 @@
 }
 .weather_feels-like{
     position: absolute;
-    margin: 20px 0 0 360px;
+    margin: 20px 0 0 361px;
 }
 .weather_temp::after,.weather_feels-like::after{
     display: inline-block;
